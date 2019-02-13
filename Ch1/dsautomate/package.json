@@ -1,0 +1,17 @@
+{
+  "name": "dsautomate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.6.5",
+    "dart-sass": "^1.9.0",
+    "fibers": "^2.0.2"
+  }
+}

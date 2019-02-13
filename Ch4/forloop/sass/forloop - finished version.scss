@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'pt_sansregular';
+  src: url('../font/pt_sansregular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'pt_sansregular', sans-serif;
+  margin: 32px;
+}
+
+ul {
+  width: 150px;
+  background-color: rgba(0,0,0,0.6)
+}
+
+$rainbow: silver slategrey antiquewhite darkgrey gainsboro;
+@for $i from 1 through 5 {
+  li:nth-child(#{$i}) {
+    color: nth($rainbow, $i);
+    font-size: 32px;
+    font-weight: bold;
+  }
+}

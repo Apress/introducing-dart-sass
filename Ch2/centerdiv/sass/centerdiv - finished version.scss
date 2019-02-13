@@ -1,0 +1,40 @@
+$color-slategrey: #708090;
+
+@mixin centerdiv {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@font-face {
+  font-family: 'pt_sansregular';
+  src: url('../font/pt_sansregular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'pt_sansregular', sans-serif;
+  background: #fff;
+}
+
+h2 {
+  text-align: center;
+}
+
+div {
+  @include centerdiv;
+ 
+  width: 40%;
+  height: 50%;
+  padding: 20px;  
+  background: $color-slategrey;
+  color: antiquewhite;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}

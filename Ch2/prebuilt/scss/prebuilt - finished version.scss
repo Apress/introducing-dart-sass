@@ -1,0 +1,45 @@
+@import "cssgram.scss";
+
+@font-face {
+  font-family: 'pt_sansregular';
+  src: url('../font/pt_sansregular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'pt_sansregular', sans-serif;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+p { 
+  width: 100px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+div.filter, div.nofilter {
+  width: 300px;
+  display: inline-block;
+  margin: 10px;
+}
+
+div.filter {
+  @extend %stinson;
+}
+
+div.nofilter img {
+  width: 100%;
+  z-index: 1;
+}

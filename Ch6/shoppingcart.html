@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Introducing Dart SASS: Creating a Shopping Cart</title>
+  <link rel="stylesheet" type="text/css" href="css/shoppingcart.css">
+</head
+<body>
+  <h2 class="exercise">Introducing Dart Sass: Creating a Shopping Cart</h2>
+  <div class="container">
+    <header id="site-header">
+      <div class="carttotal"><img src="img/shopping-basket.svg"><span>4 items</span></div>
+      <h1>Shopping cart</h1>
+    </header>
+
+    <section id="cart"> 
+      <article class="product">
+        <header>
+          <a class="remove">
+            <img src="img/ractivejs.jpg" alt="Beginning Ractive.js">
+            <h3>Remove</h3>
+          </a>
+        </header>
+
+        <div class="content">
+          <h1>Beginning Ractive.js</h1>
+          <div class="removebtn">&#10006;</div>
+          <p>Develop websites using the Ractive.js template-driven UI library. This book is project-oriented and simplifies the process of using Ractive.js to create websites or online applications that are interactive by default.</p> 
+        </div>
+
+        <footer>
+          <span class="qt-minus">-</span>
+          <span class="qt">2</span>
+          <span class="qt-plus">+</span>         
+          <div class="small">Selected format: Paperback</div>
+          <h2 class="full-price">49.98</h2>
+          <h2 class="price">19.99 each</h2>
+        </footer>
+      </article>
+
+      <article class="product">
+        <header>
+          <a class="remove">
+            <img src="img/materialize.jpg" alt="Materialize">
+            <h3>Remove</h3>
+          </a>
+        </header>
+
+        <div class="content">
+          <h1>Materialize UI</h1>
+          <div class="removebtn">&#10006;</div>
+          <p>This concise step-by-step guide includes the best practices and patterns that help readers of all levels to unearth the potential of Materialize.</p>    
+        </div>
+
+        <footer>          
+          <span class="qt-minus">-</span>
+          <span class="qt">1</span>
+          <span class="qt-plus">+</span>
+          <div class="small">Selected format: e-Book</div>
+          <h2 class="full-price">19.99</h2>
+          <h2 class="price">19.99 each</h2>
+        </footer>
+      </article>
+
+      <article class="product">
+        <header>
+          <a class="remove">
+            <img src="img/beginningsvg.jpg" alt="Beginning SVG">
+            <h3>Remove</h3>
+          </a>
+        </header>
+
+        <div class="content">
+          <h1>Beginning SVG</h1>
+          <div class="removebtn">&#10006;</div>
+          <p>This book is a project-oriented guide to creating and manipulating scalable vector graphics in the browser for websites or online applications, using little more than a text editor or free software, and the power of JavaScript.</p> 
+        </div>
+
+        <footer>         
+          <span class="qt-minus">-</span>
+          <span class="qt">1</span>
+          <span class="qt-plus">+</span>
+          <div class="small">Selected format: Paperback</div>
+          <h2 class="full-price">29.99</h2>
+          <h2 class="price">29.99 each</h2>
+        </footer>
+      </article>
+    </section>
+
+    <footer id="site-footer">
+      <div class="contain clearfix">
+        <div class="left">
+          <h2 class="subtotal"><div>Subtotal:</div><span>99.96</span></h2>
+          <h3 class="tax"><div>Taxes (5%):</div><span>5.00</span></h3>
+          <h3 class="shipping"><div>Shipping:</div><span>6.95</span></h3>
+        </div>
+
+        <div class="right">
+          <h1 class="total">Total: <span>111.91</span></h1>
+          <button>Checkout</button>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/shoppingcart.js"></script>
+</body>
+</html>

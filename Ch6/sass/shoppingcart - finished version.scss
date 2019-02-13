@@ -1,0 +1,341 @@
+@import "fonts.scss";
+@import "variables.scss";
+
+/* base styles */
+body {
+  font-family: $pt-sans-family;
+  margin: 32px;
+  background: $color-light-grey;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  margin: 32px;  
+}
+
+.container {
+  margin: 0 auto;
+  width: 980px;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;  
+}
+
+h2.exercise {
+  margin-left: auto;
+  margin-right: auto;
+  width: 980px;
+}
+
+/* header */
+#site-header {
+  margin: 0 auto;
+  padding-left: 20px;
+  background: $color-white;
+ 
+  h1 {
+    @include fontdetail($color-black, 31px, 300);
+    padding: 20px 0;
+    position: relative;
+    margin: 0;
+  }
+}
+
+/* shopping cart */
+#cart {
+  width: 100%;
+
+  h1 {
+    @include fontdetail($color-black, 25px, 300);
+  }
+
+  p { 
+    @include fontdetail($color-black, 18px, 300);
+  }
+}
+
+.product {
+  border: 1px solid $color-light-grey;
+  margin: 20px 0;
+  width: 100%;
+  position: relative;
+  transition: margin .2s linear, opacity .2s linear;
+  clear: both;
+  
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .content {
+    background-color: $color-white;
+    border-bottom: 1px solid $color-description-grey;
+    float: left;
+    box-sizing: border-box;
+    height: 171px;
+    padding: 0 20px 0 10px;
+    width: 83%;
+  }
+}
+
+.product header {
+  background-color: $color-white;
+  border-bottom: 1px solid $color-description-grey;
+  float: left;
+  margin: 0 1% 20px 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 153px;
+  height: 218px;
+  
+  h3 {
+    @include fontdetail($color-white, 22px, 300);
+
+    background: $color-moderate-cyan;
+    line-height: 49px;
+    margin: 0;
+    padding: 0 30px;
+    position: absolute;
+    bottom: -100px;
+    right: 0;
+    left: 0;
+  }
+  
+  &:hover img {
+    opacity: .7;
+  }
+
+  &:hover h3 {
+    bottom: 73px;
+  }
+}
+
+article footer {
+  margin: 0;
+  padding: 0;
+  background-color: $color-almost-white;
+
+  .price {
+    @include fontdetail($color-black, 15px, 300);
+
+    background: #fcfcfc;
+    float: right;
+    line-height: 49px;
+    margin: 0;
+    padding: 0 30px;
+    
+    &:before {
+      content: "$";
+    }
+  }
+  
+  .full-price {
+    @include fontdetail($color-black, 22px, 400);
+
+    background: $color-yellow;
+    float: right;
+    line-height: 39px;
+    margin: 5px;
+    padding: 0 30px;
+    transition: margin .15s linear;
+    width: 125px;
+    text-align: right;
+    
+    &:before {
+      content: "$";
+    }
+  }
+}
+
+.qt {
+  @include fontdetail($color-black, 19px, 300);
+  
+  line-height: 50px;
+  width: 70px;
+  text-align: center;
+  display: block;
+  float: left;  
+}
+
+.qt-plus, .qt-minus {
+  @include fontdetail($color-black, 30px, 300);
+
+  display: block;
+  float: left;
+  background: $color-almost-white;
+  border: none;
+  height: 100%;
+  padding: 0 20px;
+  transition: background .2s linear;
+  line-height: 39px;
+  margin: 5px;
+
+  &:hover {
+    background: $color-moderate-cyan;
+    color: $color-white;
+    cursor: pointer;
+  }
+}
+
+/* shopping cart footer */
+#site-footer {
+  background: $color-white;
+  margin: 30px 0 0 0;
+  padding: 40px 0px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+
+  h1 {
+    @include fontdetail($color-black, 25px, 300);
+
+    background: $color-almost-white;
+    border-bottom: 1px solid $color-description-grey;
+    margin: 0 0 7px 0;
+    padding: 14px 40px;
+    text-align: center;
+    span:before {
+      content: "$";
+    }
+  }
+    
+  h2 {
+    @include fontdetail($color-black, 24px, 300);
+    
+    margin: 10px 0 0 0;
+  }
+
+  h3 {
+    @include fontdetail($color-black, 19px, 300);
+
+    margin: 15px 0;
+  }
+  
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+  }
+}
+
+button {
+  @include fontdetail($color-black, 24px, 400);
+
+  background: $color-yellow;
+  border: 1px solid $color-dark-grey;
+  border-style: none none solid none;
+  cursor: pointer;
+  display: block;
+  padding: 16px 0;
+  width: 290px;
+  text-align: center;
+  transition: all .2s linear;
+  
+  &:hover {
+    color: $color-white;
+    background: $color-dark-cyan;
+  }
+}
+
+.small {
+  @include fontdetail($color-black, 13px, 300);
+
+  background: $color-almost-white;
+  padding: 10px 16px;
+  line-height: 28px;
+  border: none;
+  display: inline-block;
+  line-height: 29px;
+}
+
+.contain {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Remove link over books & remove button in description */
+a {
+  color: $color-black;
+  text-decoration: none;
+  transition: color .2s linear;
+  
+  &:hover {
+    color: $color-moderate-cyan;
+    cursor: pointer;
+  }
+}
+
+.removebtn {
+  @include fontdetail($color-black, 16px, bold);
+
+  width: 21px;
+  float: right;
+  margin-top: -72px;
+  background-color: $color-light-grey;
+  color: $color-white;
+  border-radius: 148px;
+  text-align: center;
+  height: 20px;
+  line-height: 20px;
+  
+  &:hover {
+    cursor: pointer;
+    background-color: $color-pure-red;
+    transition: background-color 0.3s linear;
+  }
+}
+
+/* plus and minus buttons in details */
+.minus {
+  margin: 0 50px 0 0;
+}
+
+.added {
+  margin: 0 -50px 0 0;
+}
+
+/* cart totals */
+.carttotal {
+  margin: 20px;
+  display: inline-block;
+  float: right;
+  width: 110px;
+  margin-top: 13px;
+  
+  & > img {
+    width: 40px;
+    height: auto;
+  }
+
+  & > span {
+    background-color: $color-very-light-grey;
+    padding: 5px 10px;
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: -20px;
+  }
+}  
+
+.tax, .shipping, .subtotal {
+  span {
+    float: right;
+
+    &:before {
+      content: "$";
+    }
+  }
+
+  div {
+    width: 100px;
+    display: inline-block;
+  }
+}

@@ -1,0 +1,137 @@
+$start-color: gainsboro;
+$end-color: black;
+$white: #ffffff;
+
+$step: 1; // Set the initial step value
+
+@font-face {
+  font-family: 'pt_sansregular';
+  src: url('../font/pt_sansregular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'pt_sansregular', sans-serif;
+  margin: 32px;
+  padding: 32px 80px;
+  width: 550px;
+}
+
+h1 {
+  text-align: center;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  background: coral;
+  -webkit-animation: squareToCircle 2s 1s infinite alternate;
+  -moz-animation: squareToCircle 2s 1s infinite alternate;
+  animation: squareToCircle 2s 1s infinite alternate;
+}
+
+@-webkit-keyframes squareToCircle {
+  0% {
+    border-radius: 0 0 0 0;
+    background: coral;
+    -webkit-transform: rotate(0deg) translateX(0px);
+  }
+  25% {
+    border-radius: 50% 0 0 0;
+    background: darksalmon;
+    -webkit-transform: rotate(0deg) translateX(250px);
+  }
+  50% {
+    border-radius: 50% 50% 0 0;
+    background: hotpink;
+    -webkit-transform: rotate(0deg) translateX(500px);
+  }
+  75% {
+    border-radius: 50% 50% 50% 0;
+    background: lightcoral;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(0deg) translateX(250px);
+  }
+  100% {
+    border-radius: 50% 50% 50% 50%;
+    background: darksalmon;
+    -webkit-transform: rotate(0deg) translateX(0px);
+  }
+}
+@-moz-keyframes squareToCircle {
+  0% {
+    border-radius: 0 0 0 0;
+    background: coral;
+    -moz-transform: rotate(0deg) translateX(0px);
+  }
+  25% {
+    border-radius: 50% 0 0 0;
+    background: darksalmon;
+    -moz-transform: rotate(0deg) translateX(250px);
+  }
+  50% {
+    border-radius: 50% 50% 0 0;
+    background: hotpink;
+    -moz-transform: rotate(0deg) translateX(500px);
+  }
+  75% {
+    border-radius: 50% 50% 50% 0;
+    background: lightcoral;
+    transform: rotate(135deg);
+    -moz-transform: rotate(0deg) translateX(250px);
+  }
+  100% {
+    border-radius: 50% 50% 50% 50%;
+    background: darksalmon;
+    -moz-transform: rotate(0deg) translateX(0px);
+  }
+}
+@keyframes squareToCircle {
+  0% {
+    border-radius: 0 0 0 0;
+    background: coral;
+    -webkit-transform: rotate(0deg) translateX(0px);
+    -moz-transform: rotate(0deg) translateX(0px);
+    -ms-transform: rotate(0deg) translateX(0px);
+    -o-transform: rotate(0deg) translateX(0px);
+    transform: rotate(0deg) translateX(0px);
+  }
+  25% {
+    border-radius: 50% 0 0 0;
+    background: darksalmon;
+    -webkit-transform: rotate(0deg) translateX(250px);
+    -moz-transform: rotate(0deg) translateX(250px);
+    -ms-transform: rotate(0deg) translateX(250px);
+    -o-transform: rotate(0deg) translateX(250px);
+    transform: rotate(0deg) translateX(250px);
+  }
+  50% {
+    border-radius: 50% 50% 0 0;
+    background: hotpink;
+    -webkit-transform: rotate(0deg) translateX(500px);
+    -moz-transform: rotate(0deg) translateX(500px);
+    -ms-transform: rotate(0deg) translateX(500px);
+    -o-transform: rotate(0deg) translateX(500px);
+    transform: rotate(0deg) translateX(500px);
+  }
+  75% {
+    border-radius: 50% 50% 50% 0;
+    background: lightcoral;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(0deg) translateX(250px);
+    -moz-transform: rotate(0deg) translateX(250px);
+    -ms-transform: rotate(0deg) translateX(250px);
+    -o-transform: rotate(0deg) translateX(250px);
+    transform: rotate(0deg) translateX(250px);
+  }
+  100% {
+    border-radius: 50% 50% 50% 50%;
+    background: darksalmon;
+    -webkit-transform: rotate(0deg) translateX(0px);
+    -moz-transform: rotate(0deg) translateX(0px);
+    -ms-transform: rotate(0deg) translateX(0px);
+    -o-transform: rotate(0deg) translateX(0px);
+    transform: rotate(0deg) translateX(0px);
+  }
+}

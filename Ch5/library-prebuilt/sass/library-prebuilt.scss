@@ -1,0 +1,59 @@
+// Add the import on this line
+
+@font-face {
+  font-family: 'pt_sansregular';
+  src: url('../font/pt_sansregular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Add the size variable here
+
+body {
+  font-family: 'pt_sansregular', sans-serif;
+  margin: 32px;
+  padding: 32px 80px;
+  width: 550px;
+}
+
+div {
+  width: $size;
+  height: $size;
+  background: coral;
+  animation: squareToCircle 2s 1s infinite alternate;
+}
+
+@keyframes squareToCircle {
+  0% {
+    border-radius: 0 0 0 0;
+    background: coral;
+    -webkit-transform: rotate(0deg) translateX(0px);
+    transform: rotate(0deg) translateX(0px);
+  }
+  25% {
+    border-radius: 50% 0 0 0;
+    background: tint(#6ecaa6, 40%);  // This is the one to update
+    -webkit-transform: rotate(0deg) translateX(250px);
+    transform: rotate(0deg) translateX(250px);
+  }
+  50% {
+    border-radius: 50% 50% 0 0;
+    background: hotpink;
+    -webkit-transform: rotate(0deg) translateX(500px);
+    transform: rotate(0deg) translateX(500px);
+  }
+  75% {
+    border-radius: 50% 50% 50% 0;
+    background: lightcoral;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(0deg) translateX(250px);
+    transform: rotate(0deg) translateX(250px);
+  }
+  100% {
+    border-radius: 50% 50% 50% 50%;
+    background: darksalmon;
+    -webkit-transform: rotate(0deg) translateX(0px);
+    transform: rotate(0deg) translateX(0px);
+  }
+}
+

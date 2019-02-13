@@ -1,0 +1,8 @@
+@mixin font($font-family, $font-path) {
+    @font-face {
+        font-family: $font-family;
+        src: url($font-path);
+    }
+}
+
+@include font('minionPro', '~/../../fonts/Minion Pro Regular.ttf');

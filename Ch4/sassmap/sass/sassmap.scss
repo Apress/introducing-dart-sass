@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'pt_sansregular';
+  src: url('../font/pt_sansregular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'pt_sansregular', sans-serif;
+  margin: 32px;
+  font-size: 1.3em;
+}
+
+figure img {
+  width: 400px;
+  height: auto;
+}
+
+#polaroid {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 10px;
+
+  figure {
+    float: left;
+    position: relative;
+    margin: 10px 20px;
+    padding: 6px 8px 10px 8px;
+    box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+    background: -webkit-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+    transform: rotate(-1deg);
+    backface-visibility: hidden;
+    
+    &:nth-child(even) {
+      transform: rotate(2deg);
+      box-shadow: -4px 4px 8px -4px rgba(0, 0, 0, .75);
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left:5px;
+      top: -15px;
+      width: 75px;
+      height: 25px;
+      background-color: rgba(222,220,198,0.7);
+      transform: rotate(-12deg);
+    }
+
+    &:nth-child(even):before {
+      left:150px;
+      top: -15px;
+      width: 55px;
+      height: 25px;
+      transform: rotate(12deg);
+    }
+  }
+  
+  figcaption{
+    text-align: center;
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 20.8px;
+    color: #454f40;
+    letter-spacing: 1.44px;
+  }
+}

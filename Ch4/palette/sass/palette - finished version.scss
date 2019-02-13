@@ -1,0 +1,55 @@
+$basecolor: #213451;
+
+@font-face {
+  font-family: 'pt_sansregular';
+  src: url('../font/pt_sansregular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'pt_sansregular', sans-serif;
+  margin: 32px;
+  width: 850px;
+}
+
+#palette {
+  margin-bottom: 15px;
+}
+
+.swatch {
+  height: 125px;
+  width: 75px;
+  display: inline-block;
+  margin-right: 17px;
+}
+
+.swlabel {
+  border: 1px solid #bfbfbf;
+  width: 75px;
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: -15px;
+  text-align: center;
+  padding: 10px 0px 10px 0;
+}
+
+.swatch:nth-child(1) { 
+  background-color: $basecolor;
+}
+
+.swatch:nth-child(2) { 
+  background-color: lighten(desaturate($basecolor, 22.27), 30.20);
+}
+
+.swatch:nth-child(3) {
+  background-color: lighten(desaturate(adjust-hue($basecolor, 119), 15.54), 52.55);
+}
+
+.swatch:nth-child(4) {
+  background-color: lighten(desaturate(adjust-hue($basecolor, 114), 32.11), 73.73);
+}
+
+.swatch:nth-child(5) {
+  background-color: lighten(saturate(adjust-hue(#213451, -131), 57.89), 4.90);
+}

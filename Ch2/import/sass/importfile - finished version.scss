@@ -1,0 +1,56 @@
+@import "mixins";
+
+@font-face {
+  font-family: 'pt_sansregular';
+  src: url('../font/pt_sansregular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'pt_sansregular', sans-serif;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+p { 
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrap {
+  margin:0 auto;
+  width: 800px;
+  text-align:center;
+}
+
+.btn {
+ color: white;
+ text-decoration: none;
+ padding: 5px 10px;
+ border-radius: 4px;
+ font-size: 22px;
+}
+
+.btn-antiquewhite {
+  @include button-bg(#faebd7, #000);
+}
+
+.btn-darkgrey {
+  @include button-bg(#a9a9a9, #000);
+}
+
+.btn-gainsboro{
+  @include button-bg(#dcdcdc, #000);
+}
+
+.btn-slategrey {
+  @include button-bg(#708090, #fff);
+}

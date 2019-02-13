@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+@font-face {
+  font-family: 'pt_sansregular';
+  src: url('../font/pt_sansregular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'pt_sansregular', sans-serif;
+  margin: 32px;
+}
+
+$publish: gainsboro;
+$postpone: antiquewhite;
+$delete: silver;
+
+$states: (publish, $publish),
+         (postpone, $postpone),
+         (delete, $delete);
+
+@each $buttonstate, $color in $states {
+
+button {
+  color: #000;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-family: 'Poiret One', cursive;
+  font-size: 32px;
+  font-weight: bold;
+  outline: 0;
+}
+ 
+.#{$buttonstate} {
+  padding: 10px 20px;
+  border: none;
+  background-color: $color;
+
+    &:hover {
+      background-color: darken( $color, 10% );
+      transition: all 0.3s ease;
+    }
+    &:active {
+      background: darken($color,25%);
+    }
+  }
+}

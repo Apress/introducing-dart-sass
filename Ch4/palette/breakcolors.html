@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Introducing Dart Sass: Breaking apart a Compound Color Calculation</title>
+  <style>
+    @font-face {
+      font-family: 'pt_sansregular';
+      src: url('font/pt_sansregular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      font-family: pt_sansregular, sans-serif;
+    }
+
+    .p {
+      width: 100px;
+      height: 50px;
+      margin: 10px;
+      padding: 10px;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    .p:nth-child(1) {
+      background-color: #512135;
+    }
+
+    .p:nth-child(2) {
+      background-color: #482a36;
+    }
+
+    .p:nth-child(3) {
+      background-color: #d0aebc;
+    }
+
+    .p:nth-child(4) {
+      background-color: #d0aebc;
+    }
+  </style>
+</head>
+<body>
+  <h2>Introducing Dart Sass: Breaking apart a Compound Color Calculation</h2>
+  <div class="p">#512135</div>
+  <div class="p">#482a36</div>
+  <div class="p">#d0aebc</div>
+  <div class="p">#d0aebc</div>
+</body>
+</html>

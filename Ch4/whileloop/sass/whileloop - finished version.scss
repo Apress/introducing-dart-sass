@@ -1,0 +1,43 @@
+$start-color: gainsboro;
+$end-color: black;
+$white: #ffffff;
+
+$step: 1; // Set the initial step value
+
+@font-face {
+  font-family: 'pt_sansregular';
+  src: url('../font/pt_sansregular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'pt_sansregular', sans-serif;
+  margin: 32px;
+  padding: 32px 80px;
+  width: 550px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  color: $white;
+  display: inline-block;
+  font-size: 24px;
+  list-style-type: none;
+  margin-bottom: 3.2px;
+  padding: 8px;
+  width: 80px;
+}
+
+@while $step <=10  {
+	// changes from one color to another
+  .mix li:nth-child(#{$step}) {
+    background-color: mix($end-color, $start-color, ($step * 10));
+  }
+  
+  $step: $step + 1;
+}

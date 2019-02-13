@@ -1,0 +1,39 @@
+$color-black: #000000;
+$color-yellow: #ffdb4d;
+$color-pure-red: #ff0000;
+
+// Cyans
+$color-dark-cyan: #429188;
+$color-moderate-cyan: lighten(saturate($color-dark-cyan, 2.40), 10.39);
+
+// Whites
+$color-white: #ffffff;
+$color-almost-white: darken($color-white, 1.18);
+
+// Greys
+$color-light-grey: #eeeeee;
+$color-description-grey: darken($color-light-grey, 13.33);
+$color-very-light-grey: darken($color-light-grey, 7.06);
+$color-dark-grey: darken($color-light-grey, 33.33);
+
+// Font families
+$pt-sans-family: 'pt_sansregular', sans-serif;
+$open-sans-light-family: 'open_sanslight', sans-serif;
+$open-sans-regular-family: 'open_sansregular', sans-serif;
+$open-sans-bold-family: 'open_sansbold', sans-serif;
+
+@mixin fontdetail ($color, $size, $weight) {
+  @if $weight == 300 {
+  	font-family: $open-sans-light-family;
+  } @else if $weight == 400 {
+  	font-family: $open-sans-regular-family;
+  } @else {
+  	font-family: $open-sans-bold-family;
+  }
+
+  color: $color;
+  font: {
+    size: $size;
+    weight: $weight;
+  }  
+}

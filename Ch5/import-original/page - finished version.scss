@@ -1,0 +1,14 @@
+@import "font-sizes";
+
+.page_title {
+  @extend .h1;
+}
+
+.page_cta {
+  @extend .h3;
+}
+
+.page_special_button {
+  background-color: black;
+  color: white;
+}

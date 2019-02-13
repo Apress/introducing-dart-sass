@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'pt_sansregular';
+  src: url('../font/pt_sansregular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'homemade_appleregular';
+  src: url('../font/HomemadeApple-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'pt_sansregular', sans-serif;
+  margin: 32px;
+  width: 900px;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    color: #6db046;
+  }
+}
+
+#container { 
+  width: 100%; 
+  border: 1px solid black;
+  min-height: 100px;
+  background-color: #f5f5f5;
+  > p > i {
+    padding-right: 3px;
+  }
+}
+
+article[role="main"], header {
+  float: left;
+  width: 600px / 960px * 100%;
+  margin: 15px 0px 15px 15px;
+  padding: 10px;
+}
+
+article[role="main"] {
+  min-height: 500px;
+  background-color: #fff;
+  padding: 15px;
+}
+
+header {
+  height: 55px;
+  padding: 10px 10px 0 0px;
+  margin: 15px 0 0 15px;
+  h2 {
+    font-family: 'homemade_appleregular';
+    font-size: 30px;
+    margin-top: 5px;
+    color: #6db046;
+  }
+}
+
+aside {
+  float: right;
+  width: 200px / 960px * 100%;
+  margin: 100px 15px 15px 10px;
+  float: left;
+  padding: 10px;
+  min-height: 200px;
+  background-color: #fff;
+  ul {
+    padding-left: 25px;
+    h3 {
+      border-bottom: 1px solid green;
+      margin-left: -20px;
+    }
+  }
+}
+
+footer {
+  clear: both;
+  background-color: #6db046;
+  padding: 10px;
+  width: 880px;
+}
+
+section {
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+}
+
+.details {
+  font-size: 14px;
+  clear: both;
+  padding-top: 5px;
+  border-top: 1px solid #6db046;
+}
+
+.date {
+  width: 250px / 960px * 100%;
+  font-size: 14px;
+  clear: both;
+  padding-top: 5px;
+  margin-left: 15px;
+  border-top: 1px solid #000;
+}
+
+.subimage {
+  width: 275px / 960px * 100%;
+  border: 1px solid brown;
+  height: 175px;
+  clear: both;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+img { 
+  width: 100%; 
+  height: auto;
+}
+
+.tileText { 
+  width: 100%;
+  height: 30px;
+  padding: 0px 5px 0px 5px;
+  display: block;
+  font-weight: bold;
+}
+

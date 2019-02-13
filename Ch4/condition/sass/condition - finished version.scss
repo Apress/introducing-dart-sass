@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'pt_sansregular';
+  src: url('../font/pt_sansregular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'pt_sansregular', sans-serif;
+  margin: 32px;
+  font-size: 20.8px;
+}
+
+li { 
+  padding: 20px 5px;
+  margin: 10px;
+  color: white;
+  width: 400px;
+  list-style: none;
+}
+
+$first-color: if(true, antiquewhite, black);
+$second-color: if(false, black, slategrey);
+$third-color: if(4 > 2, silver, black);
+
+li:nth-of-type(1) {
+  background: $first-color;
+  @if (lightness($first-color) > 75%) {
+      color: black;
+    } @else {
+      color: white;
+   }
+}
+
+li:nth-of-type(2) {
+  @if 1 + 1 == 2 { background: $second-color;  }
+  @if 5 > 3      { border: 3px dotted $third-color; width: 394px; }
+  @if true       { font-family: 'sans-serif'; }
+}
+
+li:nth-of-type(3) {
+  background: $third-color;
+  @if (lightness($third-color) > 75%) {
+      color: black;
+    } @else {
+      color: white;
+   }
+}
+
+li:nth-of-type(4) {
+  @if 1 + 1 == 2 { background: darken($second-color, 50%); }
+  @else if 1 + 2 == 3 { background: $second-color; }
+  @else if 5 > 3      { border: 2px dotted $third-color; }
+}

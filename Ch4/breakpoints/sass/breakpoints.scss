@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'pt_sansregular';
+  src: url('../font/pt_sansregular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'pt_sansregular', sans-serif;
+  margin: 32px;
+  font-size: 20.8px;
+}
+
+$media-queries: (
+  tablet: ( breakpoint: '(min-width: 480px) and (max-width: 768px)' ),
+  mobile: ( breakpoint: '(max-width: 480px)' )
+);
+
+@mixin media-query ($size) {
+  @each $item, $value in $media-queries {
+    @if $item == $size {
+      @if map-get($value, breakpoint) != null {
+        @media only screen and #{map-get($value, breakpoint)} {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+.row {
+  display:inline-block;
+  width: 100%;
+  font-size: 22.4px;
+  text-align: center;
+  color: #FFF;
+  padding: 4% 10%;
+  box-sizing: border-box;
+}
+
+.row {
+  background: darkgrey;
+  @include media-query(mobile) {
+    background: lightgrey;
+  } 
+  @include media-query(tablet) {
+    background: darkgrey;
+  }   
+}

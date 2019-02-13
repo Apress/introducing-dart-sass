@@ -1,0 +1,9 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #dcdcdc;
+$decoration-color: #000;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  text-decoration-color: $decoration-color;
+}
