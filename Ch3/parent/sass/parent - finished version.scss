@@ -38,7 +38,7 @@ nav {
     &:hover, &:focus {
       background-color: darken(#faebd7, 20%);
     }
-    :active{
+    &:active{
       background-color: #666;
       border-color: #666;
       color: #efefef;
